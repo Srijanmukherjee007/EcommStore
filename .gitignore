@@ -3,5 +3,6 @@
 .DS_Store
 *.sqlite3
 *.env
+migrations
 
 env
