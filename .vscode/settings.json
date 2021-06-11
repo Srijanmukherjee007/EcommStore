@@ -1,4 +1,12 @@
 {
 "python.pythonPath": "${workspaceFolder}\\env\\Scripts\\python.exe",
 "prettier.tabWidth": 4,
+"[django-html]": {
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.formatOnSave": false
+}
 }
