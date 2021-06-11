@@ -21,35 +21,14 @@
     <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet" />
     <!-- Your custom styles (optional) -->
     <link href="{% static 'css/style.min.css' %}" rel="stylesheet" />
-    <style type="text/css">
-      html,
-      body,
-      header,
-      .carousel {
-        height: 60vh;
-      }
-
-      @media (max-width: 740px) {
-        html,
-        body,
-        header,
-        .carousel {
-          height: 100vh;
-        }
-      }
-
-      @media (min-width: 800px) and (max-width: 850px) {
-        html,
-        body,
-        header,
-        .carousel {
-          height: 100vh;
-        }
-      }
-    </style>
   </head>
   <body>
     {% include "navbar.html" %} 
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} mt-2">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
     {% block content %}{% endblock content %} 
     {% block extra_content %}{% endblock extra_content %} 
     {% include "footer.html" %} 
